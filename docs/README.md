@@ -5,7 +5,7 @@
 ---
 
 ## Documentation URL
-> https://storage.googleapis.com/fona-prod-bucket/docs/index.html
+> https://bit.ly/fona-documentation
 
 ---
 
