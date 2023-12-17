@@ -4,15 +4,20 @@
 
 ---
 
-## Endpoint
+## Documentation URL
+> https://storage.googleapis.com/fona-prod-bucket/docs/index.html
 
-- BASE_URL
-  - https://gateway-service-m22xk2kynq-as.a.run.app/gateway/v1
+---
+
+## FONA Github
+> https://github.com/FONA-Food-Nutrition-Assistant
 
 ---
 
 ## Table of Contents
 - [FONA: Food Nutrition Assistant](#fona-food-nutrition-assistant)
+- [Documentation URL](#documentation-url)
+- [FONA Github](#fona-github)
 - [Endpoint](#endpoint)
 - [User Service](#user-service)
    - [Store User Data](#store-user-data)
@@ -30,6 +35,13 @@
    - [Update User Recorded Waters](#update-user-recorded-waters)
 - [Identification Service](#identification-service)
    - [Identify Food Nutrition](#identify-food-nutrition)
+
+---
+
+## Endpoint
+
+- BASE_URL
+  - https://gateway-service-m22xk2kynq-as.a.run.app/gateway/v1
 
 ---
 
