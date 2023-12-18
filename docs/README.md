@@ -50,7 +50,7 @@
 - Endpoint
   - `[BASE_URL]/us/[API_URL]`
 
-### Store User's Data
+### Store the User's Data
 
 - URL
   - `/user`
@@ -77,7 +77,7 @@
   }
   ```
 
-### Update User's Data
+### Update the User's Data
 
 - URL
   - `/user`
@@ -123,7 +123,7 @@
 }
 ```
 
-### Get User's Data
+### Retrieve the User's Data
 
 - URL
   - `/user`
@@ -172,7 +172,7 @@ Response
 - Endpoint
   - `[BASE_URL]/fs/[API_URL]`
 
-### Get List of Foods
+### Retrieve a List of Foods
 
 - URL
   - `/food`
@@ -218,7 +218,7 @@ Response
 }
 ```
 
-### Retrieve a Food's Details
+### Retrieve Details for a Specific Food
 
 - URL
   - `/food/detail`
@@ -283,7 +283,7 @@ Response
 }
 ```
 
-### Retrieve the list of nutrition for foods.
+### Retrieve the List of Nutrients for Foods
 
 - URL
   - `/food/nutrition`
