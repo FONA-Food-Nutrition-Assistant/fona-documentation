@@ -4,15 +4,20 @@
 
 ---
 
-## Endpoint
+## Documentation URL
+> https://bit.ly/fona-documentation
 
-- BASE_URL
-  - https://gateway-service-m22xk2kynq-as.a.run.app/gateway/v1
+---
+
+## FONA Github
+> https://github.com/FONA-Food-Nutrition-Assistant
 
 ---
 
 ## Table of Contents
 - [FONA: Food Nutrition Assistant](#fona-food-nutrition-assistant)
+- [Documentation URL](#documentation-url)
+- [FONA Github](#fona-github)
 - [Endpoint](#endpoint)
 - [User Service](#user-service)
    - [Store User Data](#store-user-data)
@@ -33,12 +38,19 @@
 
 ---
 
+## Endpoint
+
+- BASE_URL
+  - https://gateway-service-m22xk2kynq-as.a.run.app/gateway/v1
+
+---
+
 ## User Service
 
 - Endpoint
   - `[BASE_URL]/us/[API_URL]`
 
-### Store User Data
+### Store User's Data
 
 - URL
   - `/user`
@@ -65,7 +77,7 @@
   }
   ```
 
-### Update User Data
+### Update User's Data
 
 - URL
   - `/user`
@@ -111,7 +123,7 @@
 }
 ```
 
-### Get User Data
+### Get User's Data
 
 - URL
   - `/user`
@@ -206,7 +218,7 @@ Response
 }
 ```
 
-### Get Food Details
+### Retrieve a Food's Details
 
 - URL
   - `/food/detail`
@@ -271,7 +283,7 @@ Response
 }
 ```
 
-### Get List of Nutrition
+### Retrieve the list of nutrition for foods.
 
 - URL
   - `/food/nutrition`
@@ -328,7 +340,7 @@ Response
 }
 ```
 
-### Get List of Allergy
+### Retrieve the List of Allergies
 
 - URL
   - `/allergy`
@@ -367,7 +379,7 @@ Response
 }
 ```
 
-### Home (Get All User Recorded Foods, Recorded Water, Daily Analysis, and Food Suggestion)
+### Retrieve the User's Recorded Consumed Foods, Consumed Water, Daily Analysis, and Food Suggestions for the User
 
 - URL
   - `/home`
@@ -634,7 +646,7 @@ Response
 }
 ```
 
-### Store User Recorded Foods
+### Store the Foods Consumed by the User
 
 - URL
   - `/food`
@@ -684,7 +696,7 @@ Response
 }
 ```
 
-### Update User Recorded Foods
+### Update the Foods Consumed by the User
 
 - URL
   - `/food`
@@ -732,7 +744,7 @@ Response
 }
 ```
 
-### Store User Recorded Waters
+### Store the Water Consumed by the User
 
 - URL
   - `/water`
@@ -755,7 +767,7 @@ Response
 }
 ```
 
-### Update User Recorded Waters
+### Update the Water Consumed by the User
 
 - URL
   - `/water`
@@ -790,7 +802,7 @@ Response
 - Endpoint
   - `[BASE_URL]/is/[API_URL]`
 
-### Identify Food Nutrition
+### Identify Nutritional Information for Foods
 
 - URL
   - `/identification/predict`
