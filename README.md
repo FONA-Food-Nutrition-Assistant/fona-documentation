@@ -4,32 +4,53 @@
 
 ---
 
-## Endpoint
+## FONA: Food Nutrition Assistant Documentation
+> https://bit.ly/fona-docs
+---
 
-- BASE_URL
-  - https://gateway-service-m22xk2kynq-as.a.run.app/gateway/v1
+## Backend API Documentation
+> https://bit.ly/fona-api-docs
+
+---
+
+## FONA Github
+> https://github.com/FONA-Food-Nutrition-Assistant
 
 ---
 
 ## Table of Contents
 - [FONA: Food Nutrition Assistant](#fona-food-nutrition-assistant)
+- [FONA: Food Nutrition Assistant Documentation](#fona-food-nutrition-assistant-documentation)
+- [Backend API Documentation](#backend-api-documentation)
+- [FONA Github](#fona-github)
 - [Endpoint](#endpoint)
+    - [BASE_URL](#base_url)
 - [User Service](#user-service)
-   - [Store User Data](#store-user-data)
-   - [Update User Data](#update-user-data)
-   - [Get User Data](#get-user-data)
+    - [Store the User Data](#store-the-user-data)
+    - [Update the User Data](#update-the-user-data)
+    - [Retrieve the User Data](#retrieve-the-user-data)
 - [Food Service](#food-service)
-   - [Get List of Foods](#get-list-of-foods)
-   - [Get Food Details](#get-food-details)
-   - [Get List of Nutrition](#get-list-of-nutrition)
-   - [Get List of Allergy](#get-list-of-allergy)
-   - [Home (Get All User Recorded Foods, Recorded Water, Daily Analysis, and Food Suggestion)](#home-get-all-user-recorded-foods-recorded-water-daily-analysis-and-food-suggestion)
-   - [Store User Recorded Foods](#store-user-recorded-foods)
-   - [Update User Recorded Foods](#update-user-recorded-foods)
-   - [Store User Recorded Waters](#store-user-recorded-waters)
-   - [Update User Recorded Waters](#update-user-recorded-waters)
+    - [Retrieve a List of Foods](#retrieve-a-list-of-foods)
+    - [Retrieve Details for a Specific Food](#retrieve-details-for-a-specific-food)
+    - [Retrieve the List of Nutrients for Foods](#retrieve-the-list-of-nutrients-for-foods)
+    - [Retrieve the List of Allergies](#retrieve-the-list-of-allergies)
+    - [Retrieve the User Recorded Consumed Foods, Consumed Water, Daily Analysis, and Food Suggestions for the User](#retrieve-the-user-recorded-consumed-foods-consumed-water-daily-analysis-and-food-suggestions-for-the-user)
+    - [Store the Foods Consumed by the User](#store-the-foods-consumed-by-the-user)
+    - [Update the Foods Consumed by the User](#update-the-foods-consumed-by-the-user)
+    - [Delete User Recorded Foods](#delete-user-recorded-foods)
+    - [Store the Water Consumed by the User](#store-the-water-consumed-by-the-user)
+    - [Update the Water Consumed by the User](#update-the-water-consumed-by-the-user)
+    - [Delete User Recorded Waters](#delete-user-recorded-waters)
 - [Identification Service](#identification-service)
-   - [Identify Food Nutrition](#identify-food-nutrition)
+    - [Identify Nutritional Information for Foods](#identify-nutritional-information-for-foods)
+
+
+---
+
+## Endpoint
+
+- BASE_URL
+  - https://gateway-service-m22xk2kynq-as.a.run.app/gateway/v1
 
 ---
 
@@ -38,7 +59,7 @@
 - Endpoint
   - `[BASE_URL]/us/[API_URL]`
 
-### Store User Data
+### Store the User Data
 
 - URL
   - `/user`
@@ -65,7 +86,7 @@
   }
   ```
 
-### Update User Data
+### Update the User Data
 
 - URL
   - `/user`
@@ -111,7 +132,7 @@
 }
 ```
 
-### Get User Data
+### Retrieve the User Data
 
 - URL
   - `/user`
@@ -160,7 +181,7 @@ Response
 - Endpoint
   - `[BASE_URL]/fs/[API_URL]`
 
-### Get List of Foods
+### Retrieve a List of Foods
 
 - URL
   - `/food`
@@ -206,7 +227,7 @@ Response
 }
 ```
 
-### Get Food Details
+### Retrieve Details for a Specific Food
 
 - URL
   - `/food/detail`
@@ -271,7 +292,7 @@ Response
 }
 ```
 
-### Get List of Nutrition
+### Retrieve the List of Nutrients for Foods
 
 - URL
   - `/food/nutrition`
@@ -328,7 +349,7 @@ Response
 }
 ```
 
-### Get List of Allergy
+### Retrieve the List of Allergies
 
 - URL
   - `/allergy`
@@ -367,7 +388,7 @@ Response
 }
 ```
 
-### Home (Get All User Recorded Foods, Recorded Water, Daily Analysis, and Food Suggestion)
+### Retrieve the User Recorded Consumed Foods, Consumed Water, Daily Analysis, and Food Suggestions for the User
 
 - URL
   - `/home`
@@ -634,7 +655,7 @@ Response
 }
 ```
 
-### Store User Recorded Foods
+### Store the Foods Consumed by the User
 
 - URL
   - `/food`
@@ -684,7 +705,7 @@ Response
 }
 ```
 
-### Update User Recorded Foods
+### Update the Foods Consumed by the User
 
 - URL
   - `/food`
@@ -732,7 +753,34 @@ Response
 }
 ```
 
-### Store User Recorded Waters
+---
+
+### Delete User Recorded Foods
+
+- URL
+  - `/food`
+- Method
+  - `DELETE`
+- Request Headers
+  - `Authorization` as `Bearer`, value of id token from firebase authentication
+- Request Body
+  - Required
+    - `nutrition_ids`  as `Array of Number`, value of nutrition’s id
+    - `meal_time` as `Sarapan| Makan Siang | Makan Malam`
+    - `date` as `YYYY-MM-DD`
+- Response
+```json
+{
+    "status": 200,
+    "method": "DELETE",
+    "message": "Successfully delete data",
+    "data": []
+}
+```
+
+---
+
+### Store the Water Consumed by the User
 
 - URL
   - `/water`
@@ -755,7 +803,7 @@ Response
 }
 ```
 
-### Update User Recorded Waters
+### Update the Water Consumed by the User
 
 - URL
   - `/water`
@@ -785,12 +833,37 @@ Response
 
 ---
 
+### Delete User Recorded Waters
+- URL 
+  - `/water`
+- Method
+  - `DELETE`
+- Request Headers
+  - `Authorization` as `Bearer`, value of id token from firebase authentication
+- Request Body
+  - Required
+      - `date` as `YYYY-MM-DD`
+- Response
+```json
+{
+    "status": 200,
+    "method": "DELETE",
+    "message": "Successfully delete data",
+    "data": {
+        "raw": [],
+        "affected": 1
+    }
+}
+```
+
+---
+
 ## Identification Service
 
 - Endpoint
   - `[BASE_URL]/is/[API_URL]`
 
-### Identify Food Nutrition
+### Identify Nutritional Information for Foods
 
 - URL
   - `/identification/predict`
